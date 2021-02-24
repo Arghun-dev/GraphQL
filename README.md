@@ -44,6 +44,13 @@ Moreover, if you don't want all of these information and you just want some of t
 ```js
 {
   book(id:123) {
+    title
+    author {
+      name
+      books { 
+        name
+      }
+    }
   }
 }
 ```
