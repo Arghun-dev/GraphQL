@@ -115,3 +115,29 @@ another thing with GraphQL, is that inside the same Query we can request relatio
 ```
 
 ## Express App Setup on Node
+
+1. `mkdir server`
+2. `cd server`
+3. `npm init`
+4. `npm install express`
+5. `touch app.js`
+
+app.js
+
+```js
+const express = require('express');
+
+const app = express();
+
+app.listen(4000, () => {
+  console.log('now listening for requests on port 4000');
+})
+```
+
+
+## Setting up GraphQL
+
+1. `npm intsall graphql express-graphql`
+
+`graphql` is the main package of graphql
+`express-graphql` this package will make express understand graphql, because `express` lonely does not understand `graphql`
