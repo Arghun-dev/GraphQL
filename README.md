@@ -106,10 +106,10 @@ another thing with GraphQL, is that inside the same Query we can request relatio
   books {
     name
     genre
-  }
-  author {
-    name
-    age
+    author {
+      name
+      age
+    }
   }
 }
 ```
