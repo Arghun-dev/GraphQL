@@ -133,3 +133,11 @@ app.listen(4000, () => {
   console.log('now listening for requests on port 4000');
 })
 ```
+
+
+## Setting up GraphQL
+
+1. `npm intsall graphql express-graphql`
+
+`graphql` is the main package of graphql
+`express-graphql` this package will make express understand graphql, because `express` lonely does not understand `graphql`
