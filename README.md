@@ -64,3 +64,52 @@ Moreover, if you don't want all of these information and you just want some of t
 `GraphQL APIs are organized in terms of types and fields, not endpoints. Access the full capabilities of your data from a single endpoint. GraphQL uses types to ensure Apps only ask for what’s possible and provide clear and helpful errors. Apps can use types to avoid writing manual parsing code.`
 
 
+In this series we're going to create a GraphQL server using Node.js and we will querying that server from frontend.
+
+## Project Overview
+
+1. Server (Node.js)
+  `Express App`
+  `GraphQL Server`
+
+2. Databae (MongoDB)
+  `using mLab` => this is an online service which allows us to quickly generate a `mongoDB` instance so it's an online database
+  
+3. Client (browser)
+  `React App`
+  `Apollo` => this allows us to use GraphQL on the frontend inside React.
+  
+The good thing in GraphQL is that it's not specifically just for React, you can use it with other frameworks like `Angualr` or `Vue`
+
+
+## Making Queries
+
+to make query we will use the tool called `Graphiql` to test our queries.
+
+for example I want to make a query to get the books and the `name` and `genre` and `id` of the books
+
+```js
+{
+  books {
+    name
+    genre
+  }
+}
+```
+
+that's it. this is awesome!!!
+
+another thing with GraphQL, is that inside the same Query we can request relational data, you don't have to make additional query, we can just nest up inside here.
+
+```js
+{
+  books {
+    name
+    genre
+  }
+  author {
+    name
+    age
+  }
+}
+```
