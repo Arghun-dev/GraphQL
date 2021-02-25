@@ -141,3 +141,10 @@ app.listen(4000, () => {
 
 `graphql` is the main package of graphql
 `express-graphql` this package will make express understand graphql, because `express` lonely does not understand `graphql`
+
+
+## GraphQL Schema
+
+Schema defines our data structure
+
+inside server folder create a folder called `schema` and inside of that create a file called `schema.js`
