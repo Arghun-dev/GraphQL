@@ -219,3 +219,9 @@ got to `mLab.com` and create an account and the in server folder `npm i mongoose
 to handle graphql data on client we use `React Apollo`
 
 we want to create 2 components `BooksList` and `AddBook`
+
+## Apollo Setup
+
+in order to work with `GraphQL` on the client we need to work with GraphQL Client (React Apollo is one of them)
+
+once we use RESTful APIs we could use some libraries like `axios` or `fetch` to help use make those requests, when it comes to `GraphQL` in order to make queries to server we need to use a `GraphQL Client Apollo` and it doesn't matter that we use `React` on the frontend here, it could be `Vue.js` or `Angular` we send request to the GraphQL server and we get back data from server and we pass data to the client application using `Apollo`, you can think of `Apollo` as the thing in charge passing of data between the frontend and server. `Apollo Client` is widely used. so let's look at apollo website to see how to setup apollo in React app.
