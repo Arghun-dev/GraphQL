@@ -153,3 +153,34 @@ inside server folder create a folder called `schema` and inside of that create a
 ## Root Query
 
 Root Queries are how we describe the user can initially jump in to the graph and grab data, we're gonna define these Root Queries inside the `schema` file
+
+
+After server setup, you can run server on `localhost:4000/graphql?` and then inside there you can test your queris, for example inside there I test this
+
+```js
+{
+  book(id: "1"){
+    name
+    genre
+    id
+  } 
+}
+```
+
+OR For example I don't want `id` back to me from the server
+
+```js
+{
+  book(id: "1"){
+    name,
+    genre
+  }
+}
+```
+
+Actually, I am sending these request to the server and I'm getting back data from server.
+
+
+## GraphQL ID Type
+
+
