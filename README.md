@@ -148,3 +148,8 @@ app.listen(4000, () => {
 Schema defines our data structure
 
 inside server folder create a folder called `schema` and inside of that create a file called `schema.js`
+
+
+## Root Query
+
+Root Queries are how we describe the user can initially jump in to the graph and grab data, we're gonna define these Root Queries inside the `schema` file
