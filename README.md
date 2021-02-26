@@ -184,3 +184,22 @@ Actually, I am sending these request to the server and I'm getting back data fro
 ## GraphQL ID Type
 
 
+## Type Relations
+
+every book has an author, and every author has a collection of books. right now graphQL has no idea which book belongs to which author.
+
+first we need to add the list of books a property called `authorId`
+
+```js
+{
+  book(id: "2"){
+    id
+    name
+    genre
+    author {
+      name
+      age
+    }
+  }
+}
+```
