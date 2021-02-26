@@ -209,3 +209,11 @@ first we need to add the list of books a property called `authorId`
 we're going to save our data on `MongoDB`
 
 `mLab` is an online service of saving data on `MongoDB`
+
+got to `mLab.com` and create an account and the in server folder `npm i mongoose`
+
+
+
+# React Apollo
+
+to handle graphql data on client we use `React Apollo`
