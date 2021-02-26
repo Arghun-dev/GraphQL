@@ -179,3 +179,8 @@ OR For example I don't want `id` back to me from the server
 ```
 
 Actually, I am sending these request to the server and I'm getting back data from server.
+
+
+## GraphQL ID Type
+
+
