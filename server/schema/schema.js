@@ -11,7 +11,7 @@
 // then we defined the RootQuery which defined how we initially jump into the graph
 
 const graphql = require('graphql');
-const _ = require('loadash');
+// const _ = require('loadash');
 
 const { GraphQLObjectType, GraphQLString, GraphQLSchema } = graphql;
 
@@ -42,7 +42,7 @@ const RootQuery = new GraphQLObjectType({
         // parent will come into play when we want relationships between data
         // the first parameter is the Array we're going to search and the second parameter is how we find that
         // this is how we find and search data in database
-        return _.find(books, { id: args.id })
+        // return _.find(books, { id: args.id })
       }
     }
   }

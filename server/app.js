@@ -1,5 +1,5 @@
 const express = require('express');
-const graphqlHTTP = require('express-graphql')
+const { graphqlHTTP } = require('express-graphql')
 const schema = require('./schema/schema')
 
 const app = express();
@@ -11,7 +11,8 @@ const app = express();
 // this function is gonna fire whenever we're requesting to '/graphql' comes in
 // and this function is gonna that graphql request and this function is gonna get some options
 app.use('/graphql', graphqlHTTP({
-  schema
+  schema,
+  graphiql: true
 }));
 
 app.listen(4000, () => {
