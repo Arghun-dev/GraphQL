@@ -217,3 +217,5 @@ got to `mLab.com` and create an account and the in server folder `npm i mongoose
 # React Apollo
 
 to handle graphql data on client we use `React Apollo`
+
+we want to create 2 components `BooksList` and `AddBook`
