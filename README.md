@@ -475,3 +475,21 @@ const addBookMutation = gql`
 ```
 
 `!` this shows that this field is `Required`
+
+now how to call `addBookMutation` inside component
+
+AddBook.js
+
+```js
+const [name, setName] = useState('')
+const [genre, setGenre] = useState('')
+const [authorId, setAuthorId] = useState(null)
+
+props.addBookMutation({
+  variables: {
+    name,
+    genre,
+    authorId
+  }
+})
+```
