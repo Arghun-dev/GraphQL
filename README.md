@@ -409,3 +409,19 @@ const getAuthorsQuery = gql`
 
 export { getAuthorsQuery, getBooksQuery };
 ```
+
+and then you can use these queries inside your components.
+
+books.jsx
+
+```js
+import React from 'react'
+import { graphql } from 'react-apollo'
+import { getBooksQuery } from './queries/queries'
+
+const Books = (props) => {  
+  ...
+}
+
+export default graphql(getBooksQuery)(Books)
+```
