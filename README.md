@@ -345,4 +345,31 @@ function ExchangeRates() {
 
 Congrats, you just made your first useQuery-based component! 🎉 If you render your ExchangeRates component within your App component from the previous example, you'll first see a loading indicator on the page, followed by data when it's ready. Apollo Client automatically caches this data when it comes back from the server, so you won't see a loading indicator if you run the same query again.
 
-### Next Steps
+### Making Queries From React
+
+for example I want to get a list of books and pass it to the books component and show the lists of books in that component.
+
+Books.jsx
+
+```js
+import React from 'react'
+import { gql, graphql } from 'react-apollo'
+
+const getBooksQuery = gql`
+  {
+    books {
+      name
+      id
+    }
+  }
+`
+
+const Books = (props) => {
+  console.log(props) // in here we have access to books data backed from request
+  return (
+    ...
+  )
+}
+
+export default graphql(getBooksQuery)(Books) // in here we bind data to backed from graphql request and we have access to them in props.
+```
