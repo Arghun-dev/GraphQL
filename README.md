@@ -425,3 +425,37 @@ const Books = (props) => {
 
 export default graphql(getBooksQuery)(Books)
 ```
+
+## Mutations & Composing Queries
+
+inside queries file create a mutation query
+
+```js
+const addBookMutation = gql`
+  mutation {
+    addBook(name: "", genre: "", authorId: "") {
+      name
+      id
+    }
+  }
+`
+
+export { addBookMutation }
+```
+
+now in order to use 2 queries inside one component, we need to compose two queries together
+```js
+import { graphql, compose } from 'react-apollo'
+import { getBooksQuery, addBookMutation } from './queries/queries.js'
+
+.
+.
+props.addBookQuery()
+.
+.
+
+export default compose(
+  graphql(getBooksQuery, { name: "getBooksQuery" }),
+  graphql(addBookMutation, { name: "addBookMutation" })
+)(AddBook);
+```
