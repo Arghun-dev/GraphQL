@@ -502,6 +502,9 @@ now we add some data to the database using `addBookMutation` and after adding da
 now for example we want to `update` the `getBooksQuery` after calling `addBookMutation`. how to do that?
 
 ```js
+import { graphql, compose } from 'react-apollo'
+import { addBookMutation, getBooksQuery } from './queries/queries' 
+
 props.addBookMutation({
   variables: {
     name,
@@ -510,4 +513,9 @@ props.addBookMutation({
   }
   refetchQueries[{ query: getBooksQuery }]
 })
+
+export default compose(
+  graphql(getBooksQuery, { name: "getBooksQuery" }),
+  graphql(addBookMutation, { name: "addBookMutation" })
+)(AddBook);
 ```
