@@ -493,3 +493,21 @@ props.addBookMutation({
   }
 })
 ```
+
+
+## Re-fetching Queries
+
+now we add some data to the database using `addBookMutation` and after adding data to the database we want to update the data.
+
+now for example we want to `update` the `getBooksQuery` after calling `addBookMutation`. how to do that?
+
+```js
+props.addBookMutation({
+  variables: {
+    name,
+    genre,
+    authorId
+  }
+  refetchQueries[{ query: getBooksQuery }]
+})
+```
