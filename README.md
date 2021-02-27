@@ -459,3 +459,19 @@ export default compose(
   graphql(addBookMutation, { name: "addBookMutation" })
 )(AddBook);
 ```
+
+
+## Query variables
+
+```js
+const addBookMutation = gql`
+  mutation($name: String!, $genre: String!, $authorId: ID!){
+    addBook(name: "", genre: "", authorId: ""){
+      name
+      id
+    }
+  }
+`
+```
+
+`!` this shows that this field is `Required`
