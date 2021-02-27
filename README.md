@@ -373,3 +373,39 @@ const Books = (props) => {
 
 export default graphql(getBooksQuery)(Books) // in here we bind data to backed from graphql request and we have access to them in props.
 ```
+
+## Externalize queries into separate file
+
+in here we don't want to make queries inside that component, we want to make queries inside another external component, which make our component clean.
+
+create a folder called `queries` and create a file called `queries.js` to make your queries there, and then you can export your queris and use them inside your components.
+
+queries/queries.js
+
+```js
+import { gql } from 'react-apollo'
+
+const getBooksQuery = gql`
+  {
+    books {
+      name
+      id
+    }
+  }
+`
+
+const getAuthorsQuery = gql`
+  {
+    authors {
+      name
+      age
+      books {
+        name
+        id
+      }
+    }
+  }
+`
+
+export { getAuthorsQuery, getBooksQuery };
+```
