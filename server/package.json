@@ -9,7 +9,7 @@
   "author": "arghun",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-graphql": "^0.12.0",
     "graphql": "^15.5.0",
     "lodash": "^4.17.21",
